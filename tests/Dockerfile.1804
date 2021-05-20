@@ -1,0 +1,4 @@
+FROM ubuntu:18.04
+COPY sources.list.1804 /etc/apt/
+COPY pip.conf /etc/
+COPY clearml.conf /root/
