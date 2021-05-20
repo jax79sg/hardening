@@ -1,0 +1,39 @@
+set base_path         /var/spool/apt-mirror
+set mirror_path       $base_path/mirror
+set skel_path         $base_path/skel
+set var_path          $base_path/var
+set postmirror_script $var_path/postmirror.sh
+set defaultarch       i386
+set run_postmirror    0
+set nthreads          10
+set limit_rate        30m
+set _tilde            0
+# Use --unlink with wget (for use with hardlinked directories)
+set unlink            1
+set use_proxy         off
+set http_proxy        127.0.0.1:3128
+set proxy_user        user
+set proxy_password    password
+
+deb-amd64 http://mirror.0x.sg/ubuntu bionic main restricted
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-updates main restricted
+deb-amd64 http://mirror.0x.sg/ubuntu bionic universe
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-updates universe
+deb-amd64 http://mirror.0x.sg/ubuntu bionic multiverse
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-updates multiverse
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-backports main restricted universe multiverse
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-security main restricted
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-security universe
+deb-amd64 http://mirror.0x.sg/ubuntu bionic-security multiverse
+deb-i386 http://mirror.0x.sg/ubuntu bionic main restricted
+deb-i386 http://mirror.0x.sg/ubuntu bionic-updates main restricted
+deb-i386 http://mirror.0x.sg/ubuntu bionic universe
+deb-i386 http://mirror.0x.sg/ubuntu bionic-updates universe
+deb-i386 http://mirror.0x.sg/ubuntu bionic multiverse
+deb-i386 http://mirror.0x.sg/ubuntu bionic-updates multiverse
+deb-i386 http://mirror.0x.sg/ubuntu bionic-backports main restricted universe multiverse
+deb-i386 http://mirror.0x.sg/ubuntu bionic-security main restricted
+deb-i386 http://mirror.0x.sg/ubuntu bionic-security universe
+deb-i386 http://mirror.0x.sg/ubuntu bionic-security multiverse
+clean http://archive.ubuntu.com/ubuntu
+
